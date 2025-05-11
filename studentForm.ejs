@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="student.css">
+    <script type="text/javaScript" src="StudentValidation.js"></script>
+</head>
+<body id="studentform">
+    <%-include("mainmenu.ejs",{co:co})%>
+    <h1>🎓 Student</h1>
+    <div class="studentform">
+        <form class="row g-3 " action="/studentAdd" method="post">
+            <div class="">
+              <label for="inputEmail4" class="form-label">Name</label><span id="namevali"></span>
+              <input type="text" id="nv" name="stuname" class="form-control"   placeholder="Enter Name" onkeyup="nameValidation(this.value)" onclick="nameValidation(this.value)">
+            </div>
+            <div class="">
+              <label for="inputPassword4" class="form-label">Phone</label><span id="numvali"></span>
+              <input type="number" name="stunumber" class="form-control" id="inputPassword4" placeholder="Enter Number" onkeyup="numValidation(this.value)" onclick="setname()">
+            </div>
+            <div class="">
+              <label for="inputAddress" class="form-label">Email</label><span id="emailvali"></span>
+              <input type="text" name="stuemail" class="form-control" id="inputAddress" placeholder="Enter Email" onkeyup="emailValidation(this.value)">
+            </div>
+            
+            <div class="col-md-4">
+              <label for="inputState"  class="form-label w-100" placeholder="Enter Course">State</label>
+              <select id="inputState" name="stucourse" class="se">
+                <option selected>Select Course</option>
+                <%
+                coursedata.forEach((item,index)=>{
+                %>
+                <option value="<%= item.Course_Id%>" ><%=item.Course_Name%></option>
+                <%
+                });
+                %>
+              </select>
+            </div>
+            
+            <div class="" style="text-align: center;">
+              <button type="submit" class="btn btn-primary ">Submit</button>
+            </div>
+          </form>
+    </div>
+    
+</body>
+</html>

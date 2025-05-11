@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.studentform{
+    width: 35%;
+    margin-left:33%;
+    box-shadow:0px 4px 21px 8px;
+    padding: 20px 30px;
+    margin-top: 2%;
+    border-radius: 20px;
+}
+
+#studentform{
+    background-image:linear-gradient(to right, #039be512, #64B5F6);
+}
+
+#studentform h1{
+    text-align: center;
+}
+
+#studentform span{
+    margin-left: 60%;
+    color: red;
+}
+
+.form1{
+    width: 100%;
+    border: 2px solid black;
+}
+
+.se{
+
+    width: 150px;
+    height: 40px;
+}
+
+#StudentTable{
+   
+    background-image:linear-gradient(to right, #039be512, #64B5F6);
+}
+
+#StudentTable table thead th h1{
+    color: rgb(239, 216, 216);
+}
+
+#StudentTable table tbody tr h2{
+    color: white;
+}
